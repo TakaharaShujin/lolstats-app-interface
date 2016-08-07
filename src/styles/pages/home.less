@@ -1,0 +1,53 @@
+.app-quick-search {
+  width: 640px;
+  position: absolute;
+  bottom: 120px;
+  left: calc(~" 50% - (640px/2) ");
+  .search {
+    position: relative;
+    &-input {
+      width: 100%;
+      &:focus {
+        border-color: #ccc;
+      }
+    }
+    &-actions {
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      .btn {
+        border: 0px;
+        border-radius: 0px;
+          background-color: transparent;
+        &:hover, &:focus, &:active {
+          box-shadow: none;
+          background-color: transparent;
+        }
+      }
+      .search-location {
+        border-bottom: 3px solid #ccc;
+        padding: 6px 18px;
+      }
+      .search-submit {
+        padding: 13px 18px;
+      }
+    }
+  }
+}
+
+.app-overlay {
+  position: fixed;
+  left: 0px;
+  width: 100%;
+  top: 0px;
+  height: 100%;
+  background-color: fade(#000, 50%);
+  display: none;
+  z-index: -1;
+}
+
+.overlay-opened {
+  .app-overlay {
+    display: block;
+  }
+}

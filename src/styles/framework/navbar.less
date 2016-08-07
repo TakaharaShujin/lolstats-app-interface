@@ -1,0 +1,51 @@
+body.home-page {
+  .navbar-main {
+    padding: 12px;
+    .navbar-nav {
+      >li {
+        >a {
+          padding: 9px 24px;
+          color: #FFF;
+          border-radius: 4px;
+          transition: .21s all;
+          &:hover {
+            transition: .21s all;
+            box-shadow: 0px 0px 1px 0px #000 inset;
+            background-color: fade(#000, 40%);
+          }
+          &:focus {
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+}
+
+.navbar-main {
+  padding: 12px;
+  margin: 0px;
+  .navbar-nav {
+    &.navbar-right {
+      >li {
+        margin-left: 6px;
+      }
+    }
+    >li {
+      >a {
+        padding: 9px 24px;
+        color: #FFF;
+        border-radius: 4px;
+        transition: .21s all;
+        &:hover {
+          transition: .21s all;
+          box-shadow: 0px 0px 1px 0px #000 inset;
+          background-color: fade(#000, 40%);
+        }
+        &:focus {
+          background-color: fade(#000, 40%);
+        }
+      }
+    }
+  }
+}

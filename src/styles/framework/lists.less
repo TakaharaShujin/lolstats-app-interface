@@ -1,0 +1,43 @@
+.list {
+    &-champions {
+        text-decoration: none;
+        &-item {
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            &+.list-champions-item {
+                margin-top: 6px;
+                padding-top: 6px;
+                border-top: 1px solid #F5F5F5;
+            }
+        }
+        &-col {
+        }
+        &-avatar {
+            margin-right: 6px;
+            >img {
+                width: 42px;
+                height: 42px;
+                border-radius: 50%;
+            }
+        }
+        &-title {
+            margin: 0px 0px 3px;
+            font-size: 14px;
+            font-weight: 600;
+            width: 100px;
+        }
+        &-info {
+            text-decoration: none;
+        }
+        &-kda {
+            text-decoration: none;
+        }
+        &-played {
+            text-decoration: none;
+        }
+    }
+}

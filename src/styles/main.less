@@ -1,0 +1,31 @@
+@import "bootstrap/less/bootstrap.less";
+@import "bootstrap-social/bootstrap-social.less";
+@import "awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.less";
+@import "font-awesome/less/font-awesome.less";
+@import "app-variables.less";
+// Framework
+@import "framework/utils.less";
+@import "framework/navbar.less";
+@import "framework/forms.less";
+@import "framework/buttons.less";
+@import "framework/header.less";
+@import "framework/margin.less";
+@import "framework/panels.less";
+@import "framework/lists.less";
+@import "framework/texts.less";
+// Components
+@import "components/member-profile.less";
+// Pages
+@import "pages/home.less";
+body {
+  font-family: "Karla";
+  font-size: 13px;
+  background-color: #f7f8f9;
+  &.home-page {
+    background: transparent url("../images/akali.jpg") no-repeat center top / cover;
+  }
+}
+
+*, *:focus, *:active {
+  outline: none !important;
+}

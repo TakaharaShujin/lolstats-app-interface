@@ -1,0 +1,13 @@
+{
+  "name": "package",
+  "version": "0.0.0",
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "font-awesome": "^4.6.3",
+    "bootstrap-social": "^5.0.0",
+    "awesome-bootstrap-checkbox": "^0.3.7"
+  },
+  "resolutions": {
+    "font-awesome": "4.6.3"
+  }
+}

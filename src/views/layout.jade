@@ -1,0 +1,40 @@
+doctype html
+html(lang="tr")
+  head
+    title SSMid
+    link(href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,500,700&subset=latin,latin-ext', rel='stylesheet', type='text/css')
+    link(rel='stylesheet', href='/styles/main.css')
+    link(href='https://fonts.googleapis.com/css?family=Karla|Dosis:300,700&subset=latin,latin-ext' rel='stylesheet' type='text/css')
+  body
+    .app-wrapper
+      header.app-header
+        .container
+          nav.navbar.navbar-main(role='navigation')
+            .container-fluid
+              .collapse.navbar-collapse.navbar-ex1-collapse
+                ul.nav.navbar-nav
+                  li.active
+                    a(href='#') Link
+                  li
+                    a(href='#') Link
+                
+                ul.nav.navbar-nav.navbar-right
+                  li
+                    a(href='#') Link
+                  li.dropdown
+                    a.dropdown-toggle(href='#', data-toggle='dropdown')
+                      | Dropdown 
+                      b.caret
+                    ul.dropdown-menu
+                      li
+                        a(href='#') Action
+                      li
+                        a(href='#') Another action
+                      li
+                        a(href='#') Something else here
+                      li
+                        a(href='#') Separated link
+      main.app-content
+        block content
+      footer.app-footer
+    script(src="")

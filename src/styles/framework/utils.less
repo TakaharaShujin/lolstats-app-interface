@@ -1,0 +1,74 @@
+@import "bootstrap/less/variables.less";
+
+.p {
+  &-none {
+    padding: 0px;
+  }
+  &-t {
+    &-n {
+      padding-top: 0px;
+    }
+  }
+  &-r {
+    &-n {
+      padding-right: 0px;
+    }
+  }
+  &-b {
+    &-n {
+      padding-bottom: 0px;
+    }
+  }
+  &-l {
+    &-n {
+      padding-left: 0px;
+    }
+  }
+}
+.m {
+  &-none {
+    margin: 0px;
+  }
+  &-t {
+    &-n {
+      margin-top: 0px;
+    }
+  }
+  &-r {
+    &-n {
+      margin-right: 0px;
+    }
+    &-xs {
+      margin-right: (@padding-base-vertical / 2);
+    }
+    &-sm {
+      margin-right: @padding-base-vertical;
+    }
+  }
+  &-b {
+    &-n {
+      margin-bottom: 0px;
+    }
+  }
+  &-l {
+    &-n {
+      margin-left: 0px;
+    }
+  }
+}
+
+.width {
+  &-full {
+    width: 100%;
+  }
+}
+
+.input-group {
+  &-inline {
+    border: 0px;
+    display: table-cell;
+    .form-control {
+      margin-left: -1px;
+    }
+  }
+}

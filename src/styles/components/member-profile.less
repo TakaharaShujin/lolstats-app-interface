@@ -1,0 +1,87 @@
+.member {
+    &-profile {
+        padding: 24px;
+        background-color: #303841;
+        background: transparent url("../images/akali.jpg") no-repeat center -100px / cover;
+        &-content {
+            flex: 1;
+        }
+        &-inner {
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: stretch;
+            position: relative;
+        }
+    }
+    &-actions {
+        position: absolute;
+        bottom: 12px;
+        right: 12px;
+        >.btn {
+            color: #FFF;
+            font-size: 12px;
+            padding: 3px 12px;
+            background-color: fade(#000, 60%);
+        }
+    }
+    &-avatar {
+        width: 130px;
+        &-image {
+            position: relative;
+            >img {
+                border-radius: 50%;
+                width: 100%;
+                border: 3px solid #CAEE69;
+            }
+        }
+    }
+    &-level {
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        background-color: #212121;
+        color: #CAEE69;
+        border-radius: 50%;
+        width: 42px;
+        height: 42px;
+        line-height: 36px;
+        text-align: center;
+        border: 3px solid #CAEE69;
+    }
+    &-title {
+        color: #FFF;
+        font-size: 24px;
+        font-family: "Dosis";
+        font-weight: 700;
+        margin: 0px 0px 12px;
+        text-transform: uppercase;
+        >small {
+            text-transform: none;
+            font-family: "Karla";
+            font-size: 13px;
+            color: #BBB;
+        }
+    }
+    &-info {
+        color: #bbb;
+        font-size: 11px;
+        &-item {
+            display: inline-block;
+            margin-right: 6px;
+        }
+    }
+    &-ranks {
+        font-size: 10px;
+        &-item {
+            color: #777;
+            padding: 3px 12px;
+            border-radius: 3px;
+            margin-right: 6px;
+            display: inline-block;
+            border: 1px solid #DDD;
+            background-color: #F5F5F5;
+        }
+    }
+}

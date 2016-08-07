@@ -1,0 +1,90 @@
+extends layout
+block content
+    .member-profile.margin-bottom-md
+        .container
+            .member-profile-inner
+                .member-avatar.margin-right-md
+                    .member-avatar-image
+                        span.member-level 30
+                        img(src="http://sk2.op.gg/images/lol/champion/Katarina.png")
+                .member-profile-content
+                    .member-actions
+                        button.btn
+                            i.fa.fa-refresh.margin-right-xs
+                            span Yenile
+                        button.btn
+                            i.fa.fa-refresh.margin-right-xs
+                            span Yenile
+                        button.btn
+                            i.fa.fa-refresh.margin-right-xs
+                            span Yenile
+                    h1.member-title
+                        | Kesintisiz 
+                        small (Genel Sıralamada 26,420)
+                    .member-info.margin-bottom-xs
+                        .member-info-item
+                            b Rank: 
+                            span PLATINIUM III
+                        .member-info-item
+                            b Son aktif: 
+                            span 10 Saat önce
+                    .member-ranks.margin-bottom-x
+                        span.member-ranks-item S3 Gold
+                        span.member-ranks-item S4 Platinum
+                        span.member-ranks-item S5 Platinum
+
+    .container
+        .row
+            .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                .panel.panel-app
+                    .panel-heading
+                        h3.panel-title Test panel
+                    .panel-body
+                        | Magna laboris eiusmod Lorem proident nisi aute dolore anim aliqua irure cupidatat minim. Reprehenderit commodo aute minim labore. Occaecat excepteur exercitation exercitation non irure elit reprehenderit ex irure reprehenderit aliquip id cillum. Eu nostrud duis quis et magna
+                        | irure. Officia amet culpa adipisicing ipsum id reprehenderit officia enim.
+                    .panel-footer.text-right
+                        button.btn.btn-default Action Button
+                .panel.panel-app
+                    .panel-heading
+                        h3.panel-title Şampiyonlar
+                    .panel-body
+                        .list-champions
+                            each a in [1,2,3,4,5]
+                                .list-champions-item
+                                    .list-champions-col.list-champions-avatar
+                                        img(src="http://sk2.op.gg/images/lol/champion/Katarina.png", alt="")
+                                    .list-champions-col
+                                        h4.list-champions-title.text-truncate Veigar
+                                        .list-champions-ms MS 155.1
+                                    .list-champions-col.text-center
+                                        h4.list-champions-title.text-success 3.88:1 KDA
+                                        .list-champions-kda-extend
+                                            span 9.5
+                                            span /
+                                            span 4.9
+                                            span /
+                                            span 9.3
+                                    .list-champions-col.text-center
+                                        h4.list-champions-title.text-danger 53%
+                                        .list-champions-played-info 89 Played
+                    .panel-footer.text-right
+                        button.btn.btn-default Action Button
+            .col-xs-12.col-sm-8.col-md-8.col-lg-8
+                .panel.panel-app.panel-app-tabs
+                    .panel-heading
+                        nav.nav.nav-pills
+                            li
+                                a(href="#", title="Toplam") Toplam
+                            li
+                                a(href="#", title="Dereceli") Dereceli
+                            li
+                                a(href="#", title="Normal") Normal
+                    .panel-body
+                        | Magna laboris eiusmod Lorem proident nisi aute dolore anim aliqua irure cupidatat minim. Reprehenderit commodo aute minim labore. Occaecat excepteur exercitation exercitation non irure elit reprehenderit ex irure reprehenderit aliquip id cillum. Eu nostrud duis quis et magna | | irure. Officia amet culpa adipisicing ipsum id reprehenderit officia enim.
+                    .panel-footer.text-right
+                        button.btn.btn-default.btn-xs Action Button
+                        button.btn.btn-primary.btn-xs Action Button
+                        button.btn.btn-success.btn-xs Action Button
+                        button.btn.btn-info.btn-xs Action Button
+                        button.btn.btn-warning.btn-xs Action Button
+                        button.btn.btn-danger.btn-xs Action Button
