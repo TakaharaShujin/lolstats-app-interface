@@ -1,0 +1,39 @@
+extends layout
+block content
+    .container
+        .row
+            
+            .col-lg-12
+                .col-lg-1
+                each a in [1,2,3,4,5]
+                    .col-lg-2
+                        .panel.panel-default.blue-team.panel
+                .col-lg-12               
+                    .col-lg-1
+                    .col-lg-11
+                        .col-md-3.blue-bannedchamp-area
+                            each a in [1,2,3]
+                                img.summoner-bannedchamp
+                
+                .col-lg-1
+                .col-md-5.macinfo-panel
+                    span.label.label-default Dereceli
+                    span.label.label-primary Sihirdar Vadisi
+                    span.label.label-default Geçen Süre (00:12)
+
+                .col-lg-1
+                each a in [1,2,3,4,5]
+                    .col-lg-2
+                        .panel.panel-default.red-team.panel
+                .col-lg-12               
+                    .col-lg-1
+                    .col-lg-11
+                        .col-md-3.red-bannedchamp-area
+                            each a in [1,2,3]
+                                img.summoner-bannedchamp
+
+
+
+
+
+
