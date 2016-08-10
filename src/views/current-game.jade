@@ -2,21 +2,23 @@ extends layout
 block content
     .container
         .row
-            
             .col-lg-12
+
                 .col-lg-1
                 each a in [1,2,3,4,5]
                     .col-lg-2
-                        .panel.panel-default.blue-team.panel
+                        .panel.panel-default.summoner-blue-team.panel(content-loader color="blue" target="/bilgi/466244/45")
                 .col-lg-12               
                     .col-lg-1
                     .col-lg-11
-                        .col-md-3.blue-bannedchamp-area
+                        .col-md-3.summoner-blue-bannedchamp-area
                             each a in [1,2,3]
-                                img.summoner-bannedchamp
+                                img.summoner-bannedchamp(width="40" src="http://sk2.op.gg/images/lol/champion/Katarina.png")
+                        a.go-search(href="~/" data-toggle="tooltip" data-placement="bottom" title="Maç Aramaya Dön")
+                            i.fa.fa-backward
                 
                 .col-lg-1
-                .col-md-5.macinfo-panel
+                .col-md-5.summoner-macinfo-panel
                     span.label.label-default Dereceli
                     span.label.label-primary Sihirdar Vadisi
                     span.label.label-default Geçen Süre (00:12)
@@ -24,13 +26,13 @@ block content
                 .col-lg-1
                 each a in [1,2,3,4,5]
                     .col-lg-2
-                        .panel.panel-default.red-team.panel
+                        .panel.panel-default.summoner-red-team.panel(content-loader color="red" target="/bilgi/466244/45")
                 .col-lg-12               
                     .col-lg-1
                     .col-lg-11
-                        .col-md-3.red-bannedchamp-area
+                        .col-md-3.summoner-blue-bannedchamp-area
                             each a in [1,2,3]
-                                img.summoner-bannedchamp
+                                img.summoner-bannedchamp(width="40" src="http://sk2.op.gg/images/lol/champion/Katarina.png")
 
 
 
