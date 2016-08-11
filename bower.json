@@ -9,5 +9,12 @@
   },
   "resolutions": {
     "font-awesome": "4.6.3"
+  },
+  "overrides": {
+    "font-awesome": {
+      "main": [
+        "fonts/*.*"
+      ]
+    }
   }
 }
