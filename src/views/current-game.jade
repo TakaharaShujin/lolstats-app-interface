@@ -1,0 +1,123 @@
+extends layout
+block content
+    .container
+        .row
+
+            .col-lg-12
+                .col-lg-1
+                each a in [1,2,3,4,5]
+                    .col-lg-2
+                        .panel.panel-default.summoner-blue-team-panel(content-loader color="blue" target="/bilgi/466244/45")
+                            
+                            .panel-heading.summoner-champ-img(style="background-image: url(http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Irelia_0.jpg)")
+                                p.text-info.pull-right.summoner-champplay-count
+                                    a(href="#" data-toggle="tooltip" data-placement="right" title="Seçtiği şampiyonla oynanan toplam maç") 30
+                                img.summoner-spells(src="http://ssmid.net/images/spells/14.png")
+                                br
+                                img.summoner-spells(src="http://ssmid.net/images/spells/7.png")
+                                br 
+                                br 
+                                img.summoner-spells(src="http://ddragon.leagueoflegends.com/cdn/6.16.2/img/mastery/6162.png" data-toggle="tooltip" data-placement="left" title="Savaş Şevki")
+                                br 
+                                img.summoner-spells(src="http://ssmid.net/images/5355.png" data-toggle="tooltip" data-placement="right" title="12,06 Yetenek Gücü 9 Yetenek Gücü 0,14 Yetenek Gücü 8,5 Yetenek Gücü")
+                            
+                            .panel-body.text-center.summoner-panel
+                                a(href="#")
+                                    img.summoner-info-circular.summoner-rankimg(src="../images/rank/diamond_V.png")
+                                    h2.summoner-rankimg-text IV
+                                .col-xs-12
+                                    h5.panel-title.summoner-name
+                                        a.summoner-blue-teammember.h6(href="#" data-toggle="tooltip" data-placement="top"
+                   title="Seviye 30") Kesintisiz
+                                .col-xs-12
+                                    ul.summoner-info-list-group
+
+                                        li.col-xs-12.summoner-info-list-item
+                                            strong(style="font-size:13px") 100 Lig Puanı
+
+                                        li.col-xs-12.summoner-info-list-item.summoner-key
+                                            a(href="#" data-toggle="tooltip" data-placement="right" title="Seçtiği şampiyon ile SON 3 maçının KDA toplamı") Takıma Katkısı
+                                                label.text-info 10 | 2 | 7
+
+                                        li.col-xs-12.summoner-info-list-item.summoner-key
+                                            a(href="#" data-toggle="tooltip" data-placement="right" title="Geçerli sezonda dereceli oyunlardaki toplam galibiyeti ve malubiyeti") Dereceli Kazanma Oranı
+                                            .progress
+                                                .progress-bar.progress-bar-green(role="progressbar" aria-valuenow="100"
+                             aria-valuemin="0" aria-valuemax="100" style="width:100%") 100%
+
+                                        li.col-xs-12.summoner-info-list-item.summoner-key
+                                            a(href="#" data-toggle="tooltip" data-placement="right" title="Seçtiği şampiyon ile oynadığı SON 5 maçın KDA bilgisi")
+                                                label.text-success 10 | 2 | 7
+
+                                        li.col-xs-12.summoner-info-list-item.summoner-key
+                                            a(href="#" data-toggle="tooltip" data-placement="right" title="Seçtiği şampiyonun sezon KDA bilgisi") Veigar Dereceli Performansı
+                                                h6.summoner-value 
+                                                    label.text-danger 10 | 2 | 7
+                a.go-search(href="~/" data-toggle="tooltip" data-placement="bottom" title="Maç Aramaya Dön")
+                    i.fa.fa-backward
+            
+            .col-lg-12             
+                .col-lg-1
+                .col-lg-11
+                    .col-md-3.summoner-blue-bannedchamp-area
+                        each a in [1,2,3]
+                            img.summoner-bannedchamp(width="40" src="http://sk2.op.gg/images/lol/champion/Katarina.png")
+                    .col-lg-1
+                    .col-md-5.summoner-macinfo-panel
+                        span.label.label-default Dereceli
+                        span.label.label-primary Sihirdar Vadisi
+                        span.label.label-default Geçen Süre (00:12)
+                    .col-md-3.summoner-red-bannedchamp-area
+                        each a in [1,2,3]
+                            img.summoner-bannedchamp(width="40" src="http://sk2.op.gg/images/lol/champion/Katarina.png")
+
+            .col-lg-12
+                .col-lg-1
+                each a in [1,2,3,4,5]
+                    .col-lg-2
+                        .panel.panel-default.summoner-red-team-panel(content-loader color="red" target="/bilgi/466244/45")
+                            
+                            .panel-heading.summoner-champ-img(style="background-image: url(http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Bard_0.jpg)")
+                                p.text-info.pull-right.summoner-champplay-count
+                                    a(href="#" data-toggle="tooltip" data-placement="right" title="Seçtiği şampiyonla oynanan toplam maç") 30
+                                img.summoner-spells(src="http://ssmid.net/images/spells/14.png")
+                                br
+                                img.summoner-spells(src="http://ssmid.net/images/spells/7.png")
+                                br 
+                                br 
+                                img.summoner-spells(src="http://ddragon.leagueoflegends.com/cdn/6.16.2/img/mastery/6162.png" data-toggle="tooltip" data-placement="left" title="Savaş Şevki")
+                                br 
+                                img.summoner-spells(src="http://ssmid.net/images/5355.png" data-toggle="tooltip" data-placement="right" title="12,06 Yetenek Gücü 9 Yetenek Gücü 0,14 Yetenek Gücü 8,5 Yetenek Gücü")
+                            
+                            .panel-body.text-center.summoner-panel
+                                a(href="#")
+                                    img.summoner-info-circular.summoner-rankimg(src="../images/rank/diamond_V.png")
+                                    h2.summoner-rankimg-text IV
+                                .col-xs-12
+                                    h5.panel-title.summoner-name
+                                        a.summoner-red-teammember.h6(href="#" data-toggle="tooltip" data-placement="top"
+                   title="Seviye 30") Kesintisiz
+                                .col-xs-12
+                                    ul.summoner-info-list-group
+
+                                        li.col-xs-12.summoner-info-list-item
+                                            strong(style="font-size:13px") 100 Lig Puanı
+
+                                        li.col-xs-12.summoner-info-list-item.summoner-key
+                                            a(href="#" data-toggle="tooltip" data-placement="right" title="Seçtiği şampiyon ile SON 3 maçının KDA toplamı") Takıma Katkısı
+                                                label.text-info 10 | 2 | 7
+
+                                        li.col-xs-12.summoner-info-list-item.summoner-key
+                                            a(href="#" data-toggle="tooltip" data-placement="right" title="Geçerli sezonda dereceli oyunlardaki toplam galibiyeti ve malubiyeti") Dereceli Kazanma Oranı
+                                            .progress
+                                                .progress-bar.progress-bar-green(role="progressbar" aria-valuenow="100"
+                             aria-valuemin="0" aria-valuemax="100" style="width:100%") 100%
+
+                                        li.col-xs-12.summoner-info-list-item.summoner-key
+                                            a(href="#" data-toggle="tooltip" data-placement="right" title="Seçtiği şampiyon ile oynadığı SON 5 maçın KDA bilgisi")
+                                                label.text-success 10 | 2 | 7
+
+                                        li.col-xs-12.summoner-info-list-item.summoner-key
+                                            a(href="#" data-toggle="tooltip" data-placement="right" title="Seçtiği şampiyonun sezon KDA bilgisi") Veigar Dereceli Performansı
+                                                h6.summoner-value 
+                                                    label.text-danger 10 | 2 | 7
