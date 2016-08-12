@@ -1,6 +1,6 @@
-@height-cards-item: 404px;
+@height-cards-item: 400px;
 @height-front-back: 380px;
-@height-content: 202px;
+@height-content: 200px;
 .summoner-cards-item {
 	-moz-perspective: 800px;
 	-o-perspective: 800px;
@@ -35,18 +35,20 @@
 		cursor: pointer;
 		&.team-blue {
 			.front, .back {
-				.box-shadow(0px 0px 5px 1px #0058ff);
+				.box-shadow(0px 0px 8px 1px #0000ff);
 			}
 			.name {
-				color: #0058ff;
+				color: #0000ff;
+				font-weight: bold;
 			}
 		}
 		&.team-red {
 			.front, .back {
-				.box-shadow(0px 0px 5px 1px #e80000);
+				.box-shadow(0px 0px 8px 1px #ff0000);
 			}
 			.name {
-				color: #e80000;
+				color: #ff0000;
+				font-weight: bold;
 			}
 		}
 		.front {
@@ -54,7 +56,8 @@
 			-o-backface-visibility: hidden;
 			-webkit-backface-visibility: hidden;
 			backface-visibility: hidden;
-			background-color: #ffffff;
+			//background-color: #ffffff;
+			background-color: fade(#FFF, 80%);
 			border-radius: 4px;
 			box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.14);
 			height: @height-front-back;
@@ -63,6 +66,7 @@
 			top: 0;
 			width: 100%;
 			z-index: 2;
+
 		}
 		.back {
 			-moz-backface-visibility: hidden;
@@ -72,7 +76,8 @@
 			-webkit-backface-visibility: hidden;
 			-webkit-transform: rotateY( 180deg);
 			backface-visibility: hidden;
-			background-color: #ffffff;
+			//background-color: #ffffff;
+		 	background-color: fade(#FFF, 80%);
 			border-radius: 4px;
 			box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.14);
 			height: @height-front-back;
@@ -152,7 +157,7 @@
 			padding: 0px 12px;
 			min-height: @height-content;
 			position: relative;
-			color: #999999;
+			color: #000;
 			text-align: center;
 			.back & {
 				height: 215px;
