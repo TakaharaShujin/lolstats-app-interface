@@ -34,16 +34,18 @@
 		transition: transform .5s;
 		cursor: pointer;
 		&.team-blue {
-			.front, .back {
-				.box-shadow(0px 0px 8px 1px @color-darkblue);
+			.front, .back, .blue-shadow {
+				border: none;
+				box-shadow: 0px 0px 20px 1px fade(@color-darkblue, 99%);
 			}
 			.name {
 				color: @color-darkblue;
 			}
 		}
 		&.team-red {
-			.front, .back {
-				.box-shadow(0px 0px 8px 1px @color-darkred);
+			.front, .back, .red-shadow {
+				border: none;
+				box-shadow: 0px 0px 20px 1px fade(@color-darkred, 99%);
 			}
 			.name {
 				color: @color-darkred;
@@ -326,17 +328,6 @@
 				}
 			}
 		}
-	}
-	.banned-champion-cross{
-		position: absolute;
-	}
-	.blue-shadow {
-		border: none !important;
-		box-shadow: 0px 0px 8px 1px fade(@color-darkblue, 100%);
-	}
-	.red-shadow {
-	    border: none !important;
-	     box-shadow: 0px 0px 8px 1px fade(@color-darkred, 100%);
 	}
 	.profession{
 		font-weight: bold !important;
