@@ -1,6 +1,20 @@
 @height-cards-item: 350px;
 @height-front-back: 340px;
 @height-content: 150px;
+@color-darkred: #AC001B;
+@color-darkgreen: #299d29;
+@color-darkblue: #0030ff;
+@color-darkgray: #5a5a5a;
+
+@color-red: #d9534f;
+@color-green: #5cb85c;
+@color-blue: #337ab7;
+@color-ice: #5daff0;
+@color-yellow: #cead10;
+@color-purple: #aa1ac1;
+@color-black: #000000;
+@color-white: #FFFFFF;
+@color-gray: #b4a9a9;
 .summoner-cards-item {
 	-moz-perspective: 800px;
 	-o-perspective: 800px;
@@ -27,7 +41,7 @@
 		-o-transition: -o-transform .5s;
 		-webkit-transform-style: preserve-3d;
 		-webkit-transition: -webkit-transform .5s;
-		background: none repeat scroll 0 0 #FFFFFF;
+		background: none repeat scroll 0 0 @color-white;
 		border-radius: 4px;
 		color: #444444;
 		position: relative;
@@ -36,18 +50,18 @@
 		cursor: pointer;
 		&.team-blue {
 			.front, .back {
-				.box-shadow(0px 0px 8px 1px #0030ff);
+				.box-shadow(0px 0px 8px 1px @color-darkblue);
 			}
 			.name {
-				color: #0030ff;
+				color: @color-darkblue;
 			}
 		}
 		&.team-red {
 			.front, .back {
-				.box-shadow(0px 0px 8px 1px #AC001B);
+				.box-shadow(0px 0px 8px 1px @color-darkred);
 			}
 			.name {
-				color: #AC001B;
+				color: @color-darkred;
 			}
 		}
 
@@ -57,9 +71,9 @@
 			-o-backface-visibility: hidden;
 			-webkit-backface-visibility: hidden;
 			backface-visibility: hidden;
-			    	background-color: rgba(255, 255, 255, 0.85);
+			background-color: fade(@color-white, 85%);
 			border-radius: 4px;
-			box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.14);
+			box-shadow: 0 1px 3px 0 fade(@color-black, 14%);
 			height: @height-front-back;
 			left: 0;
 			position: absolute;
@@ -75,9 +89,9 @@
 			-webkit-backface-visibility: hidden;
 			-webkit-transform: rotateY( 180deg);
 			backface-visibility: hidden;
-			background-color: rgba(255, 255, 255, 0.85);
+			background-color: fade(@color-white, 85%);
 			border-radius: 4px;
-			box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.14);
+			box-shadow: 0 1px 3px 0 fade(@color-black, 14%);
 			height: @height-front-back;
 			left: 0;
 			position: absolute;
@@ -88,6 +102,7 @@
 			.ability {
 				&-title {
 					text-decoration: none;
+					font-weight: italic;
 				}
 				&-mastery {
 					text-decoration: none;
@@ -108,14 +123,14 @@
 				position: absolute;
 				right: 12px;
 				top: 12px;
-				background-color: fade(#000, 75%);
+				background-color: fade(@color-black, 75%);
 				border-radius: 50%;
 				font-size: 12px;
 				text-align: center;
 				line-height: 28px;
 				width: 28px;
 				height: 28px;
-				color: #FFF;
+				color: @color-white;
 			}
 			.spell, .passive {
 				position: absolute;
@@ -127,14 +142,14 @@
 					width: 25px;
 					margin-right: 6px;
 					border-radius: 3px;
-					border: 1px solid #000;
+					border: 1px solid @color-black;
 				}
 			}
 			.passive {
 				bottom: 12px;
 				width: 25px;
 				border-radius: 3px;
-				border: 1px solid #000;
+				border: 1px solid @color-black;
 			}
 		}
 		.rank {
@@ -152,9 +167,9 @@
 			box-shadow: none;
 			min-height: @height-content;
 			position: relative;
-			color: #000;
+			color: @color-black;
 			text-align: center;
-			    padding: 0 10px;
+			padding: 0 5px;
 			.back & {
 				height: 215px;
 			}
@@ -166,10 +181,11 @@
 			margin-bottom: 0 !important;
 		}
 		.stats-bar {
-			border-top: 1px solid #EEEEEE;
+			/*border-top: 1px solid @color-gray;*/
 			&-label {
+				border-top: 1px solid @color-gray;
 				font-size: 12px;
-				color: #000;
+				color: @color-black;
 			}
 			&-item {
 				//margin-bottom: 3px;
@@ -183,10 +199,10 @@
 						line-height: 12px;
 						font-size: 10px;
 						&-danger{
-							background-color: #AC001B;
+							background-color: @color-darkred;
 						}
 						&-success{
-							background-color:#299d29;
+							background-color:@color-darkgreen;
 						}
 					}
 				}
@@ -217,7 +233,7 @@
 			}
 		}
 		.footer {
-			border-top: 1px solid #EEEEEE;
+			border-top: 1px solid @color-gray;
 			color: #999999;
 			padding: 6px 0;
 			text-align: center;
@@ -230,7 +246,7 @@
 			height: 90px;
 			padding: 15px 20px;
 			.motto {
-				border-bottom: 1px solid #EEEEEE;
+				border-bottom: 1px solid @color-gray;
 				color: #999999;
 				font-size: 14px;
 				font-weight: 400;
@@ -251,36 +267,84 @@
 			.stats {
 				width: calc(~"100% / 3");
 				&:first-child {
-					border-right: 1px solid #EEEEEE;
+					border-right: 1px solid @color-gray;
 				}
 				&:last-child {
-					border-left: 1px solid #EEEEEE;
+					border-left: 1px solid @color-gray;
 				}
 				h4 {
 					font-weight: 300;
-					margin-bottom: 5px;
+        			margin:0;
 				}
 				p {
 					color: #777777;
+					font-size: 12px;
+			        margin:0;
+			        margin-top:5px;
+				}
+				&.red{
+					>h4,p{
+					color: @color-red;
+					}
+				}
+				&.green{
+					>h4,p{
+					color: @color-green;
+					}
+				}
+				&.blue{
+					>h4,p{
+					color: @color-blue;
+					}
 				}
 			}
 		}
 		.back-main-title {
-			text-align: left;
-			border-bottom: 1px solid #EEE;
+			text-align: center;
+			border-bottom: 1px solid @color-gray;
 			padding-bottom: 6px;
-			color: #5a5a5a;
+			color: @color-darkgray;
 			font-weight: 600;
 		}
 		.rune-list {
 			text-align: left;
-			margin: 0px;
+    		margin: 0px;
 			>li {
 				margin-bottom: 3px;
 				.badge {
-					float: right;
-					border-radius: 2px;
-					background-color: #5a5a5a;
+					/*float: right;*/
+					/*border-radius: 2px;*/
+					margin-right: 2px;
+           			margin-bottom:3px;
+           			font-size: 13px !important;
+					background-color: @color-darkgray;
+					&.b-red{
+						background-color: @color-red;
+					}
+					&.b-yellow{
+						background-color: @color-yellow;
+					}
+					&.b-blue{
+						background-color: @color-blue;
+					}
+					&.b-purple{
+						background-color: @color-purple;
+					}
+				}
+				span{
+					font-weight: bold;
+					&.c-red{
+						color: @color-red;
+					}
+					&.c-yellow{
+						color: @color-yellow;
+					}
+					&.c-blue{
+						color: @color-blue;
+					}
+					&.c-purple{
+						color: @color-purple;
+					}
 				}
 			}
 		}
@@ -290,22 +354,14 @@
 
 		.blue-shadow {
     		border: none;
-    		box-shadow: 0px 0px 8px 1px #0030ff;
-    		background-color: rgba(255, 255, 255, 0.8);
+    		box-shadow: 0px 0px 8px 1px @color-darkblue;
+    		background-color: fade(@color-white, 80%);
 			}
 
 		.red-shadow {
 		    border: none;
-		    box-shadow: 0px 0px 8px 1px #AC001B;
-		    background-color: rgba(255, 255, 255, 0.8);
-		}
-
-		.text-green {
-	    	color: #299d29;
-		}
-
-		.text-red {
-		    color: #AC001B;
+		    box-shadow: 0px 0px 8px 1px @color-darkred;
+		    background-color: fade(@color-white, 80%);
 		}
 
 		.profession{
@@ -313,11 +369,11 @@
 		}
 
 		.text-success{
-		    color: #299d29;
+		    color: @color-darkgreen;
 		}
 
 		.text-danger {
-		    color: #e34d4d;
+		    color: @color-darkred;
 		}
 		.hvr-grow {
 		    transform: translateZ(0);
@@ -333,7 +389,7 @@
 
 	    .division {
 	    	position: absolute;
-		    color: rgba(255,255,255,.9);
+		    color: fade(@color-white, 90%);
 		    font-size: 55px;
 		    top: 20px;
 		    text-align: center;
