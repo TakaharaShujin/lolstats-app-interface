@@ -1,3 +1,4 @@
+
 @import "bootstrap/less/bootstrap.less";
 @import "bootstrap-social/bootstrap-social.less";
 @import "awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.less";
@@ -22,7 +23,7 @@
 body {
   font-family: "Karla";
   font-size: 13px;
-  background-color: #f7f8f9;
+  background-color: @background-color;
   &.home-page {
     background: transparent url("../images/b.jpg") no-repeat center fixed;
   }
@@ -30,4 +31,24 @@ body {
 
 *, *:focus, *:active {
   outline: none !important;
+}
+
+.match-info,.map,.match-info-champion,.back-main-title,
+.summoner-cards-item,.flip-content,.front,.back,.cover,
+.passive,.spell-item,.progress,.badge{
+	border-radius: 6px !important;
+}
+.match-info,.map{
+    padding: 12px;
+    box-shadow: 0px 0px 8px 1px fade(@color-white, 85%);
+    background-color: fade(@color-white, 70%);
+}
+.text-success{
+    color: @color-darkgreen !important;
+}
+.text-danger {
+    color: @color-darkred !important;
+}
+.text-info {
+    color: @color-ice !important;
 }

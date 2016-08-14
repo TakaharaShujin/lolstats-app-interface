@@ -1,25 +1,11 @@
 @height-cards-item: 350px;
 @height-front-back: 340px;
 @height-content: 150px;
-@color-darkred: #AC001B;
-@color-darkgreen: #299d29;
-@color-darkblue: #0030ff;
-@color-darkgray: #5a5a5a;
 
-@color-red: #d9534f;
-@color-green: #5cb85c;
-@color-blue: #337ab7;
-@color-ice: #5daff0;
-@color-yellow: #cead10;
-@color-purple: #aa1ac1;
-@color-black: #000000;
-@color-white: #FFFFFF;
-@color-gray: #b4a9a9;
 .summoner-cards-item {
 	-moz-perspective: 800px;
 	-o-perspective: 800px;
 	-webkit-perspective: 800px;
-	border-radius: 4px;
 	height: @height-cards-item;
 	perspective: 800px;
 	width: 100%;
@@ -42,8 +28,7 @@
 		-webkit-transform-style: preserve-3d;
 		-webkit-transition: -webkit-transform .5s;
 		background: none repeat scroll 0 0 @color-white;
-		border-radius: 4px;
-		color: #444444;
+		color: @color-gray;
 		position: relative;
 		transform-style: preserve-3d;
 		transition: transform .5s;
@@ -64,15 +49,12 @@
 				color: @color-darkred;
 			}
 		}
-
-
 		.front {
 			-moz-backface-visibility: hidden;
 			-o-backface-visibility: hidden;
 			-webkit-backface-visibility: hidden;
 			backface-visibility: hidden;
 			background-color: fade(@color-white, 85%);
-			border-radius: 4px;
 			box-shadow: 0 1px 3px 0 fade(@color-black, 14%);
 			height: @height-front-back;
 			left: 0;
@@ -90,7 +72,6 @@
 			-webkit-transform: rotateY( 180deg);
 			backface-visibility: hidden;
 			background-color: fade(@color-white, 85%);
-			border-radius: 4px;
 			box-shadow: 0 1px 3px 0 fade(@color-black, 14%);
 			height: @height-front-back;
 			left: 0;
@@ -109,7 +90,6 @@
 			}
 		}
 		.cover {
-			border-radius: 4px 4px 0 0;
 			height: 130px;
 			overflow: hidden;
 			position: relative;
@@ -180,14 +160,12 @@
 			margin-bottom: 0 !important;
 		}
 		.stats-bar {
-			/*border-top: 1px solid @color-gray;*/
 			&-label {
 				border-top: 1px solid @color-gray;
 				font-size: 12px;
 				color: @color-black;
 			}
 			&-item {
-				//margin-bottom: 3px;
 				.progress {
 					margin: 0px;
 					height: 12px;
@@ -197,6 +175,10 @@
 					&-bar {
 						line-height: 12px;
 						font-size: 10px;
+						span {
+						margin-left: 5px;
+						margin-right: 5px;
+						}
 						&-danger{
 							background-color: @color-darkred;
 						}
@@ -233,7 +215,7 @@
 		}
 		.footer {
 			border-top: 1px solid @color-gray;
-			color: #999999;
+			color: @color-silver;
 			padding: 6px 0;
 			text-align: center;
 			position: absolute;
@@ -246,7 +228,7 @@
 			padding: 15px 20px;
 			.motto {
 				border-bottom: 1px solid @color-gray;
-				color: #999999;
+				color: @color-silver;
 				font-size: 14px;
 				font-weight: 400;
 				padding-bottom: 10px;
@@ -276,23 +258,23 @@
         			margin:0;
 				}
 				p {
-					color: #777777;
+					color: @color-darkgray;
 					font-size: 12px;
 			        margin:0;
 			        margin-top:5px;
 				}
 				&.red{
-					>h4,p{
+					> h4 , p {
 					color: @color-red;
 					}
 				}
 				&.green{
-					>h4,p{
+					> h4 , p{
 					color: @color-green;
 					}
 				}
 				&.blue{
-					>h4,p{
+					> h4 , p{
 					color: @color-blue;
 					}
 				}
@@ -308,94 +290,76 @@
 		.rune-list {
 			text-align: left;
     		margin: 0px;
-			>li {
+			> li {
 				margin-bottom: 3px;
 				.badge {
-					/*float: right;*/
-					/*border-radius: 2px;*/
 					margin-right: 2px;
            			margin-bottom:3px;
            			font-size: 13px !important;
-					background-color: @color-darkgray;
-					&.b-red{
+					&.b-marks{
 						background-color: @color-red;
 					}
-					&.b-yellow{
+					&.b-seals{
 						background-color: @color-yellow;
 					}
-					&.b-blue{
+					&.b-glyphs{
 						background-color: @color-blue;
 					}
-					&.b-purple{
+					&.b-qunits{
 						background-color: @color-purple;
 					}
 				}
 				span{
 					font-weight: bold;
-					&.c-red{
+					&.c-marks{
 						color: @color-red;
 					}
-					&.c-yellow{
+					&.c-seals{
 						color: @color-yellow;
 					}
-					&.c-blue{
+					&.c-glyphs{
 						color: @color-blue;
 					}
-					&.c-purple{
+					&.c-qunits{
 						color: @color-purple;
 					}
 				}
 			}
 		}
-
 	}
-
-
-		.blue-shadow {
-    		border: none;
-    		box-shadow: 0px 0px 8px 1px @color-darkblue;
-    		background-color: fade(@color-white, 80%);
-			}
-
-		.red-shadow {
-		    border: none;
-		    box-shadow: 0px 0px 8px 1px @color-darkred;
-		    background-color: fade(@color-white, 80%);
-		}
-
-		.profession{
-	    	font-weight: bold;
-		}
-
-		.text-success{
-		    color: @color-darkgreen;
-		}
-
-		.text-danger {
-		    color: @color-darkred;
-		}
-		.hvr-grow {
-		    transform: translateZ(0);
-		    transition-duration: 0.4s;
-		    transition-property: transform;
-		}
-
-	    .hvr-grow:hover,
-	    .hvr-grow:focus,
-	    .hvr-grow:active {
-	        transform: scale(1.10);
-	    }
-
-	    .division {
-	    	position: absolute;
-		    color: fade(@color-white, 90%);
-		    font-size: 55px;
-		    top: 20px;
-		    text-align: center;
-		    left: 0px;
-		    z-index: 99999;
-		    width: 100%;
-		    font-weight: bold;
-	    }
-
+	.banned-champion-cross{
+		position: absolute;
+	}
+	.blue-shadow {
+		border: none !important;
+		box-shadow: 0px 0px 8px 1px fade(@color-darkblue, 100%);
+	}
+	.red-shadow {
+	    border: none !important;
+	     box-shadow: 0px 0px 8px 1px fade(@color-darkred, 100%);
+	}
+	.profession{
+		font-weight: bold !important;
+	}
+	.division-grow {
+	    transform: translateZ(0);
+	    transition-duration: 0.4s;
+	    transition-property: transform;
+	}
+	.division-grow:hover,
+	.division-grow:focus,
+	.division-grow:active {
+	    transform: scale(1.10);
+	}
+	.division {
+		position: absolute;
+	    color: fade(@color-white, 90%);
+	    font-size: 55px;
+	    top: 20px;
+	    text-align: center;
+	    left: 0px;
+	    z-index: 99999;
+	    width: 100%;
+	    font-weight: bold;
+	}
 }

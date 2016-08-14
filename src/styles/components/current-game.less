@@ -2,9 +2,9 @@
     position: fixed;
     left: 24px;
     top: 36px;
-    background-color: fade(#FFF, 20%);
+    background-color: fade(@color-white, 20%);
     border: 0px;
-    color: #FFF;
+    color: @color-white;
 }
 
 .summoner-cards {
@@ -23,40 +23,45 @@
 }
 
 .match-info {
-    padding: 12px;
-    background-color: fade(#FFF, 60%);
     margin: -10px 91px 3px 91px;
-    border-radius: 4px;
-    box-shadow: 0px 0px 8px 1px rgba(255,255,255,.85);
-    background-color: rgba(255, 255, 255, 0.75);
+    >div > img{
+        border: none;
+    }
     &-blue {
         float: left;
+        > img{
+            box-shadow: 0px 0px 8px 1px fade(@color-darkblue, 100%);
+        }
     }
     &-red {
         float: right;
+        > img{
+            box-shadow: 0px 0px 8px 1px fade(@color-darkred, 100%);
+        }
     }
     &-champion {
         width: 48px;
         height: 48px;
         margin-right: 6px;
-        border-radius: 3px;
-        border: 1px solid #000;
+        border: 1px solid @color-black;
     }
     &-map {
         text-align: center;
         .map {
-            background-color: #FFF;
-            padding: 12px 24px;
-            color: #5a5a5a;
+            color: @color-black;
             display: inline-block;
             font-size: 16px;
             font-weight: 600;
-            text-transform: uppercase;
-            border-radius: 4px;
             margin: 0px 6px;
-            &-type {}
-            &-name {}
-            &-time {}
+            &-type {
+
+            }
+            &-name {
+
+            }
+            &-time {
+
+            }
         }
     }
 }
