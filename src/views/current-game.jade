@@ -3,17 +3,40 @@ html(lang="tr")
   head
     title SSMid
     include ./partials/head.jade
+    script(type='text/javascript').
+        setInterval(function myFunction() {
+            var matchtime = 1471250275676;
+            var d1 = new Date(matchtime);
+
+            var d2 = new Date();
+            var s = new Date(d2 - d1);
+            var minutes = s.getMinutes();
+            var seconds = s.getSeconds();
+            
+
+            if(minutes < 10)
+            {
+               minutes ='0'+ minutes;
+            }
+            if(seconds <10)
+            {
+               seconds ='0'+ seconds;
+            }
+            
+            var elapsed=minutes+':'+seconds;
+
+            document.getElementById("elapsed").innerHTML =elapsed;
+        }, 1000);
   body.overlay-opened.home-page
     .app-wrapper
       main.app-content
-        a.btn.btn-default.current-game-back(href="#")
-          i.fa.fa-arrow-left.margin-right-sm
-          | Maç Aramaya Dön
+        a.current-game-back(href="/")
+          i.fa.fa-backward.margin-right-sm
         .container
             .summoner-cards
                 each item in [1,2,3,4,5]
                     .summoner-cards-item.manual-flip
-                        .flip-content.team-blue
+                        .flip-content.team-blue.card-grow
                             .front
                                 .cover
                                     .spell
@@ -79,7 +102,7 @@ html(lang="tr")
                                         .stats.blue
                                             h4 0
                                             p Resolve
-                                    h4.back-main-title Rune Bilgileri
+                                    h4.back-main-title Rünler
                                     ul.list-unstyled.rune-list
                                       li 
                                         div.badge.b-marks +8.5
@@ -105,18 +128,18 @@ html(lang="tr")
               .match-info-map
                 .map.map-type Normal
                 .map.map-name Sihirdar Vadisi
-                .map.map-time 22:46
+                #elapsed.map.map-time
             .summoner-cards
                 each item in [1,2,3,4,5]
                     .summoner-cards-item.manual-flip
-                        .flip-content.team-red
+                        .flip-content.team-red.card-grow
                             .front
                                 .cover
                                     .spell
                                       img.spell-item(src="http://ssmid.net/images/spells/4.png")
                                       img.spell-item(src="http://ssmid.net/images/spells/3.png")
                                     img.passive(src="http://ddragon.leagueoflegends.com/cdn/6.16.2/img/mastery/6263.png")
-                                    span.cover-total-match.red-shadow 84
+                                    span.cover-total-match.blue-shadow 84
                                     img.cover-image(src='http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Irelia_0.jpg')
                                 .rank.division-grow
                                     img.img-circle(src='../images/rank/diamond_V.png')
@@ -175,7 +198,7 @@ html(lang="tr")
                                         .stats.blue
                                             h4 0
                                             p Resolve
-                                    h4.back-main-title Rune Bilgileri
+                                    h4.back-main-title Rünler
                                     ul.list-unstyled.rune-list
                                       li 
                                         div.badge.b-marks +8.5

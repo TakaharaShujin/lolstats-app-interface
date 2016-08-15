@@ -2,9 +2,20 @@
     position: fixed;
     left: 24px;
     top: 36px;
-    background-color: fade(@color-white, 20%);
+    background-color: transparent;
     border: 0px;
-    color: @color-white;
+    color: @color-black;
+    pointer-events:focus;
+    text-decoration: none;
+    &:hover{
+        color: @color-darkred;
+    }
+    &:active{
+        color: @color-white;
+    }
+    >i{
+        font-size: 50px;
+    }
 }
 
 .summoner-cards {
@@ -54,13 +65,13 @@
             font-weight: 600;
             margin: 0px 6px;
             &-type {
-
+                width: 90px;
             }
             &-name {
-
+                width: 140px;
             }
             &-time {
-
+                width: 65px;
             }
         }
     }
