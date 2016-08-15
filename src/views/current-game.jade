@@ -22,7 +22,9 @@ html(lang="tr")
             {
                seconds ='0'+ seconds;
             }
-            
+            if (s.getHours() > 0) {
+                    minutes = minutes + (s.getHours() * 60);
+                }
             var elapsed=minutes+':'+seconds;
 
             document.getElementById("elapsed").innerHTML =elapsed;
