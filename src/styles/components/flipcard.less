@@ -92,7 +92,7 @@
 			}
 		}
 		.cover {
-			height: 130px;
+			height: 156px;
 			overflow: hidden;
 			position: relative;
 			&-image {
@@ -165,10 +165,11 @@
 			&-label {
 				border-top: 1px solid @color-gray;
 				font-size: 12px;
-				color: @color-black;
+				color: #4800ff;/*istisna*/
 			}
 			&-item {
 				.progress {
+					background-color: gray;
 					margin: 0px;
 					height: 12px;
 					border-radius: 2px;
@@ -196,48 +197,35 @@
 				vertical-align: top;
 				line-height: 14px;
 				width: 15%;
+				font-weight: bold;
 			}
-			.kda-wrap {
+			.kda {
 				&+.stats-bar-label {
 					margin-top: 0px;
 				}
 				&-item {
+					font-size: 14px;
+					font-weight: bold;
 					display: inline-block;
 					width: 48%;
 					vertical-align: top;
-					padding: 0px 6px;
+					padding: 0px 2px;
 					&.kda-count {
 						text-align: left;
 					}
 					&.kda-avarage {
 						text-align: right;
+						&.bad{
+							color: @color-darkred;
+						}
+						&.excellent{
+							color: @color-darkgreen;
+						}
+						&.normal{
+							color: @color-black;
+						}
 					}
 				}
-			}
-		}
-		.footer {
-			border-top: 1px solid @color-gray;
-			color: @color-silver;
-			padding: 6px 0;
-			text-align: center;
-			position: absolute;
-			bottom: 0px;
-			left: 0px;
-			width: 100%;
-		}
-		.header {
-			height: 90px;
-			padding: 15px 20px;
-			.motto {
-				border-bottom: 1px solid @color-gray;
-				color: @color-silver;
-				font-size: 14px;
-				font-weight: 400;
-				padding-bottom: 10px;
-				text-align: center;
-				font-weight: 400;
-				line-height: 20px;
-				margin: 5px 0;
 			}
 		}
 		.stats-container {
@@ -298,32 +286,32 @@
 					margin-right: 2px;
            			margin-bottom:3px;
            			font-size: 13px !important;
-					&.b-marks{
+					&.b-red{
 						background-color: @color-red;
 					}
-					&.b-seals{
+					&.b-yellow{
 						background-color: @color-yellow;
 					}
-					&.b-glyphs{
+					&.b-blue{
 						background-color: @color-blue;
 					}
-					&.b-qunits{
+					&.b-black{
 						background-color: @color-purple;
 					}
 				}
 				span{
 					font-weight: bold;
-					&.c-marks{
+					&.c-red{
 						color: @color-red;
 					}
-					&.c-seals{
+					&.c-yellow{
 						color: @color-yellow;
 					}
-					&.c-glyphs{
+					&.c-blue{
 						color: @color-blue;
 					}
-					&.c-qunits{
-						color: @color-purple;
+					&.c-black{
+						black: @color-purple;
 					}
 				}
 			}
