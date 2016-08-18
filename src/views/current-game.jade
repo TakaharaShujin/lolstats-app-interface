@@ -38,78 +38,8 @@ html(lang="tr")
             .summoner-cards
                 each item in [1,2,3,4,5]
                     .summoner-cards-item.manual-flip
-                        .flip-content.team-blue.card-grow
-                            .front
-                                .cover
-                                    .spell
-                                      img.spell-item(src="http://ssmid.net/images/spells/4.png")
-                                      img.spell-item(src="http://ssmid.net/images/spells/3.png")
-                                    img.passive(src="http://ddragon.leagueoflegends.com/cdn/6.16.2/img/mastery/6263.png")
-                                    span.cover-total-match.blue-shadow 84
-                                    img.cover-image(src='http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Irelia_0.jpg')
-                                .rank.division-grow
-                                    img.img-circle(src='../images/rank/diamond_V.png')
-                                    h2.division IV
-                                .content
-                                    h3.name Who Fed EscapeIV
-                                    .profession 100 Lig Puanı
-                                    .profession
-                                        span.text-success 80 G
-                                        span  | 
-                                        span.text-danger 90 Y
-                                    .stats-bar
-                                        .stats-bar-label Dereceli Kazanma Oranı
-                                        .stats-bar-item
-                                            .progress
-                                                .progress-bar.progress-bar-success.progress-bar-striped(style='width: 40%')
-                                                    span 170 Galibiyet
-                                                .progress-bar.progress-bar-danger.progress-bar-striped(style='width: 60%')
-                                                    span 241 Mağlubiyet
-                                            .stats-bar-percent 80%
-                                        .stats-bar-label Şampiyon Bilgisi
-                                        .stats-bar-item
-                                            .progress
-                                                .progress-bar.progress-bar-success.progress-bar-striped(style='width: 80%')
-                                                    span 37 Galibiyet
-                                                .progress-bar.progress-bar-danger.progress-bar-striped(style='width: 20%')
-                                                    span 4 Mağlubiyet
-                                            .stats-bar-percent 80%
-                                        .kda
-                                            .kda-item.kda-count
-                                                span.profession 14
-                                                span /
-                                                span.profession 41
-                                                span /
-                                                span.profession 81
-                                            .kda-item.kda-avarage.bad 11.14:1 KDA
-                            .back
-                                .content
-                                    h4.back-main-title Kabiliyetler
-                                    h5.ability-title tanker
-                                    .stats-container
-                                        .stats.red
-                                            h4 18
-                                            p Ferocity
-                                        .stats.green
-                                            h4 12
-                                            p Cunning
-                                        .stats.blue
-                                            h4 0
-                                            p Resolve
-                                    h4.back-main-title Rünler
-                                    ul.list-unstyled.rune-list
-                                      li 
-                                        div.badge +8.5
-                                        span Fiziksel Hasar
-                                      li  
-                                        div.badge +8.5
-                                        span Fiziksel Hasar
-                                      li  
-                                        div.badge +8.5
-                                        span Fiziksel Hasar
-                                      li  
-                                        div.badge +8.5
-                                        span Fiziksel Hasar
+                        .flip-content.team-blue.card-grow.loading-img.blue
+                            button.failed-btn.blue-shadow(src="##") error retry
             .match-info
               .match-info-blue
                 img.match-info-champion(src="http://ddragon.leagueoflegends.com/cdn/6.16.2/img/champion/Trundle.png")

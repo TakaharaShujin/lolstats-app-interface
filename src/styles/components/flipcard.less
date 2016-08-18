@@ -33,6 +33,25 @@
 		transform-style: preserve-3d;
 		transition: transform .5s;
 		cursor: pointer;
+		&.loading-img{
+			    background-repeat:no-repeat;
+			    background-position: center;
+    			height: 340px;
+    			&.red{
+			    	background-image:  url('../Images/red-loading.svg');
+    			}
+    			&.blue{
+			    	background-image:  url('../Images/blue-loading.svg');
+    			}
+				
+		}
+		>button{
+			//content:url("http://google.com.tr");
+			margin-left: calc(~"100% / 3.45");
+			margin-top: calc(~"100% / 1.09");
+			color: @color-black !important;
+		}
+
 		&.team-blue {
 			.front, .back, .blue-shadow {
 				border: none;
