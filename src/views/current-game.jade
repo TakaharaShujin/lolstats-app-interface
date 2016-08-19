@@ -3,97 +3,43 @@ html(lang="tr")
   head
     title SSMid
     include ./partials/head.jade
+    script(type='text/javascript').
+        setInterval(function myFunction() {
+            var matchtime = 1471250275676;
+            var d1 = new Date(matchtime);
+
+            var d2 = new Date();
+            var s = new Date(d2 - d1);
+            var minutes = s.getMinutes();
+            var seconds = s.getSeconds();
+            
+
+            if(minutes < 10)
+            {
+               minutes ='0'+ minutes;
+            }
+            if(seconds <10)
+            {
+               seconds ='0'+ seconds;
+            }
+            if (s.getHours() > 0) {
+                    minutes = minutes + (s.getHours() * 60);
+                }
+            var elapsed=minutes+':'+seconds;
+
+            document.getElementById("elapsed").innerHTML =elapsed;
+        }, 1000);
   body.overlay-opened.home-page
     .app-wrapper
       main.app-content
-        a.btn.btn-default.current-game-back(href="#")
-          i.fa.fa-arrow-left.margin-right-sm
-          | Maç Aramaya Dön
+        a.current-game-back(href="/")
+          i.fa.fa-backward.margin-right-sm
         .container
             .summoner-cards
                 each item in [1,2,3,4,5]
                     .summoner-cards-item.manual-flip
-                        .flip-content.team-blue
-                            .front
-                                .cover
-                                    .spell
-                                      img.spell-item(src="http://ssmid.net/images/spells/4.png")
-                                      img.spell-item(src="http://ssmid.net/images/spells/3.png")
-                                    img.passive(src="http://ddragon.leagueoflegends.com/cdn/6.16.2/img/mastery/6263.png")
-                                    span.cover-total-match 84
-                                    img.cover-image(src='http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Irelia_0.jpg')
-                                .rank
-                                    img.img-circle(src='../images/rank/diamond_V.png')
-                                .content
-                                    h3.name Newbie Jhin
-                                    .profession 100 Lig Puanı
-                                    .profession
-                                        span.text-green 80G | 
-                                        span.text-red 90Y
-                                    .stats-bar
-                                        .stats-bar-label Dereceli Kazanma Oranı
-                                        .stats-bar-item
-                                            .progress
-                                                .progress-bar.progress-bar-success.progress-bar-striped(style='width: 40%')
-                                                    span 17 Galibiyet
-                                                .progress-bar.progress-bar-danger.progress-bar-striped(style='width: 60%')
-                                                    span 24 Malubiyet
-                                            .stats-bar-percent 80%
-                                        .kda-wrap
-                                            .kda-wrap-item.kda-count
-                                                span.text-success 14
-                                                | |
-                                                span.text-danger 4
-                                                | |
-                                                span.text-info 8
-                                            .kda-wrap-item.kda-avarage 3.14:1 KDA
-                                        .stats-bar-label Şampiyon Bilgisi
-                                        .stats-bar-item
-                                            .progress
-                                                .progress-bar.progress-bar-success.progress-bar-striped(style='width: 80%')
-                                                    span 37 Galibiyet
-                                                .progress-bar.progress-bar-danger.progress-bar-striped(style='width: 20%')
-                                                    span 4 Malubiyet
-                                            .stats-bar-percent 80%
-                                        .kda-wrap
-                                            .kda-wrap-item.kda-count
-                                                span.text-success 14
-                                                | |
-                                                span.text-danger 4
-                                                | |
-                                                span.text-info 8
-                                            .kda-wrap-item.kda-avarage 3.14:1 KDA
-                            .back
-                                .content
-                                    h4.back-main-title Kabiliyetler
-                                    h5.ability-title tanker
-                                    .stats-container
-                                        .stats
-                                            h4 18
-                                            p
-                                              | Ferocity
-                                        .stats
-                                            h4 12
-                                            p
-                                              | Cunning
-                                        .stats
-                                            h4 0
-                                            p
-                                              | Resolve
-                                    h4.back-main-title Rune Bilgileri
-                                    ul.list-unstyled.rune-list
-                                      li 
-                                        .badge +8.5
-                                        | Fiziksel Hasar
-                                      li 
-                                        .badge +8.5
-                                        | Fiziksel Hasar
-                                      li 
-                                        .badge +8.5
-                                        | Fiziksel Hasar
-                                      li 
-                                        .badge +8.5
-                                        | Fiziksel Hasar
+                        .flip-content.team-blue.card-grow.loading-img.blue
+                            button.failed-btn.blue-shadow(src="##") error retry
             .match-info
               .match-info-blue
                 img.match-info-champion(src="http://ddragon.leagueoflegends.com/cdn/6.16.2/img/champion/Trundle.png")
@@ -106,90 +52,82 @@ html(lang="tr")
               .match-info-map
                 .map.map-type Normal
                 .map.map-name Sihirdar Vadisi
-                .map.map-time 22:46
+                #elapsed.map.map-time
             .summoner-cards
                 each item in [1,2,3,4,5]
                     .summoner-cards-item.manual-flip
-                        .flip-content.team-blue
+                        .flip-content.team-red.card-grow
                             .front
                                 .cover
                                     .spell
                                       img.spell-item(src="http://ssmid.net/images/spells/4.png")
                                       img.spell-item(src="http://ssmid.net/images/spells/3.png")
                                     img.passive(src="http://ddragon.leagueoflegends.com/cdn/6.16.2/img/mastery/6263.png")
-                                    span.cover-total-match 84
+                                    span.cover-total-match.blue-shadow 84
                                     img.cover-image(src='http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Irelia_0.jpg')
-                                .rank
+                                .rank.division-grow
                                     img.img-circle(src='../images/rank/diamond_V.png')
+                                    h2.division IV
                                 .content
                                     h3.name Newbie Jhin
                                     .profession 100 Lig Puanı
                                     .profession
-                                        span.text-green 80G | 
-                                        span.text-red 90Y
+                                        span.text-success 80 G
+                                        span  | 
+                                        span.text-danger 90 Y
                                     .stats-bar
                                         .stats-bar-label Dereceli Kazanma Oranı
                                         .stats-bar-item
                                             .progress
                                                 .progress-bar.progress-bar-success.progress-bar-striped(style='width: 40%')
-                                                    span 17 Galibiyet
+                                                    span 170 Galibiyet
                                                 .progress-bar.progress-bar-danger.progress-bar-striped(style='width: 60%')
-                                                    span 24 Malubiyet
+                                                    span 241 Mağlubiyet
                                             .stats-bar-percent 80%
-                                        .kda-wrap
-                                            .kda-wrap-item.kda-count
-                                                span.text-success 14
-                                                | |
-                                                span.text-danger 4
-                                                | |
-                                                span.text-info 8
-                                            .kda-wrap-item.kda-avarage 3.14:1 KDA
                                         .stats-bar-label Şampiyon Bilgisi
                                         .stats-bar-item
                                             .progress
                                                 .progress-bar.progress-bar-success.progress-bar-striped(style='width: 80%')
                                                     span 37 Galibiyet
                                                 .progress-bar.progress-bar-danger.progress-bar-striped(style='width: 20%')
-                                                    span 4 Malubiyet
+                                                    span 4 Mağlubiyet
                                             .stats-bar-percent 80%
-                                        .kda-wrap
-                                            .kda-wrap-item.kda-count
-                                                span.text-success 14
-                                                | |
-                                                span.text-danger 4
-                                                | |
-                                                span.text-info 8
-                                            .kda-wrap-item.kda-avarage 3.14:1 KDA
+                                        .kda
+                                            .kda-item.kda-count
+                                                span.profession 14
+                                                span /
+                                                span.profession 4
+                                                span /
+                                                span.profession 8
+                                            .kda-item.kda-avarage.excellent 4.14:1 KDA
                             .back
                                 .content
                                     h4.back-main-title Kabiliyetler
                                     h5.ability-title tanker
                                     .stats-container
-                                        .stats
+                                        .stats.red
                                             h4 18
-                                            p
-                                              | Ferocity
-                                        .stats
+                                            p Ferocity
+                                        .stats.green
                                             h4 12
-                                            p
-                                              | Cunning
-                                        .stats
+                                            p Cunning
+                                        .stats.blue
                                             h4 0
-                                            p
-                                              | Resolve
-                                    h4.back-main-title Rune Bilgileri
+                                            p Resolve
+                                    h4.back-main-title Rünler
                                     ul.list-unstyled.rune-list
                                       li 
-                                        .badge +8.5
-                                        | Fiziksel Hasar
-                                      li 
-                                        .badge +8.5
-                                        | Fiziksel Hasar
-                                      li 
-                                        .badge +8.5
-                                        | Fiziksel Hasar
-                                      li 
-                                        .badge +8.5
-                                        | Fiziksel Hasar
-            
+                                        div.badge +8.5
+                                        span Fiziksel Hasar
+                                      li  
+                                        div.badge +8.5
+                                        span Fiziksel Hasar
+                                      li  
+                                        div.badge +8.5
+                                        span Fiziksel Hasar
+                                      li  
+                                        div.badge +8.5
+                                        span Fiziksel Hasar
+                                        
+    include ./partials/footer.jade        
     include ./partials/scripts.jade

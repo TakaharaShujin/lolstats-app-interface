@@ -1,3 +1,4 @@
+
 @import "bootstrap/less/bootstrap.less";
 @import "bootstrap-social/bootstrap-social.less";
 @import "awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.less";
@@ -22,12 +23,58 @@
 body {
   font-family: "Karla";
   font-size: 13px;
-  background-color: #f7f8f9;
+  background-color: @background-color;
   &.home-page {
-    background: transparent url("../images/akali.jpg") no-repeat center top / cover;
+    background: transparent url("../images/b.jpg") no-repeat center fixed;
   }
 }
 
 *, *:focus, *:active {
   outline: none !important;
+}
+
+.footer {
+  border-top: 1px solid @color-gray;
+  color: @color-silver;
+  padding: 6px 0;
+  text-align: center;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+}
+.header {
+  height: 90px;
+  padding: 15px 20px;
+  .motto {
+    border-bottom: 1px solid @color-gray;
+    color: @color-silver;
+    font-size: 14px;
+    font-weight: 400;
+    padding-bottom: 10px;
+    text-align: center;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 5px 0;
+  }
+}
+    
+.match-info,.map,.match-info-champion,.back-main-title,
+.summoner-cards-item,.flip-content,.front,.back,.cover,
+.passive,.spell-item,.progress,.badge{
+	border-radius: 6px !important;
+}
+.match-info,.map{
+    padding: 12px;
+    box-shadow: 0px 0px 8px 1px fade(@color-white, 85%);
+    background-color: fade(@color-white, 70%);
+}
+.text-success{
+    color: @color-darkgreen !important;
+}
+.text-danger {
+    color: @color-darkred !important;
+}
+.text-info {
+    color: @color-ice !important;
 }

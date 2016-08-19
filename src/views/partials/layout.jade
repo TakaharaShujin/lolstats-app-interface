@@ -5,34 +5,8 @@ html(lang="tr")
     include ./head.jade
   body
     .app-wrapper
-      header.app-header
-        .container
-          nav.navbar.navbar-main(role='navigation')
-            .container-fluid
-              .collapse.navbar-collapse.navbar-ex1-collapse
-                ul.nav.navbar-nav
-                  li.active
-                    a(href='#') Link
-                  li
-                    a(href='#') Link
-                
-                ul.nav.navbar-nav.navbar-right
-                  li
-                    a(href='#') Link
-                  li.dropdown
-                    a.dropdown-toggle(href='#', data-toggle='dropdown')
-                      | Dropdown 
-                      b.caret
-                    ul.dropdown-menu
-                      li
-                        a(href='#') Action
-                      li
-                        a(href='#') Another action
-                      li
-                        a(href='#') Something else here
-                      li
-                        a(href='#') Separated link
+      include ./navbar.jade
       main.app-content
         block content
-      footer.app-footer
-        include ./scripts.jade
+      include ./footer.jade
+      include ./scripts.jade
