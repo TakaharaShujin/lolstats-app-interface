@@ -1,8 +1,14 @@
 doctype html
-html(lang="tr")
+html
   head
     title SSMid
     include ./partials/head.jade
+    script(type='text/javascript').
+      function selectLocation() {
+          var x = document.getElementById("location");
+          var i = x.selectedIndex;
+          document.getElementById("sloc").value = x.options[i].text;
+      }
   body.overlay-opened.home-page
       .app-wrapper
         include ./partials/navbar.jade
@@ -14,9 +20,21 @@ html(lang="tr")
               div.info-text
                 strong Aktif oyun yok veya şampiyon seçimi yapılıyor.. Lütfen Tekrar Deneyiniz.
               .search
-                input.form-control.input-lg.search-input(placeholder="Sihirdar ara..")
+                input.form-control.input-lg.search-input(placeholder="canlı maç ara..")
+                input(id="sloc" name="sloc" value="TR" type="hidden")
                 .search-actions
-                  button.btn.btn-default.search-location(type="button") TR
+                  select.search-location(id="location" onchange="selectLocation()")
+                    option TR
+                    option NA
+                    option EUW
+                    option EUNE
+                    option LAN
+                    option LAS
+                    option BR
+                    option RU
+                    option OCE
+                    option KR
+                    option JP
                   button.btn.btn-default.search-submit(type="submit")
                     i.fa.fa-search
             .app-overlay
