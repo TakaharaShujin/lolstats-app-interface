@@ -5,13 +5,13 @@ body.home-page {
       >li {
         >a {
           padding: 9px 24px;
-          color: #FFF;
-          border-radius: 4px;
+          color: @color-white;
+          border-radius: 5px;
           transition: .21s all;
           &:hover {
             transition: .21s all;
-            box-shadow: 0px 0px 1px 0px #000 inset;
-            background-color: fade(#000, 40%);
+            box-shadow: 0px 0px 1px 0px @color-black inset;
+            background-color: fade(@color-black, 40%);
           }
           &:focus {
             background-color: transparent;
@@ -34,16 +34,16 @@ body.home-page {
     >li {
       >a {
         padding: 9px 24px;
-        color: #FFF;
-        border-radius: 4px;
+        color: @color-white;
+        border-radius: 5px;
         transition: .21s all;
         &:hover {
           transition: .21s all;
-          box-shadow: 0px 0px 1px 0px #000 inset;
-          background-color: fade(#000, 40%);
+          box-shadow: 0px 0px 1px 0px @color-black inset;
+          background-color: fade(@color-black, 40%);
         }
         &:focus {
-          background-color: fade(#000, 40%);
+          background-color: fade(@color-black, 40%);
         }
       }
     }

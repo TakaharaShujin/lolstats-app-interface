@@ -18,7 +18,7 @@ html
               div.text-danger
                 i.fa.fa-warning.fa-2x
               div.info-text
-                strong Aktif oyun yok veya şampiyon seçimi yapılıyor.. Lütfen Tekrar Deneyiniz.
+                strong Aktif oyun yok veya şampiyon seçimi yapılıyor.. Lütfen Tekrar Deneyiniz..
               .search
                 input.form-control.input-lg.search-input(name="_sid" id="search" placeholder="canlı maç ara..")
                 input(id="sloc" name="sloc" value="TR" type="hidden")
@@ -38,5 +38,6 @@ html
                   button.btn.btn-default.search-submit(type="submit")
                     i.fa.fa-search
             .app-overlay
-        include ./partials/footer.jade
+        footer.app-footer.trnsprn(style="bottom:0;")
+          include ./partials/footer.jade
       include ./partials/scripts.jade
